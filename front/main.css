@@ -1,0 +1,110 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #fef8f8e7;
+  --secundary-color: #1e1e1ee7;
+  --shadow-color: #000000a1;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(55, 49, 49);
+  height: 100px;
+  padding: 10px;
+}
+
+img{
+  width: 100px; /* Largura da imagem */
+  height: auto; /* Altura automática para manter a proporção original */
+}
+
+.header-image{
+  padding: 10px;
+  margin-left: 30px;
+}
+.header-text{
+  padding: 10px;
+  color: rgb(224, 222, 222);  
+  font-size: 1.0rem;  
+}
+
+label {
+  
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+legend {
+  font-weight: bold;
+  
+  font-size: 1.2em; /* Tamanho da fonte, ajuste conforme necessário */
+}
+input{
+  width: 350px;
+  height: 35px;
+  padding: 10px;
+  
+}
+select{
+  width: 550px;
+  height: 35px;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 95%;
+  margin: 5vh auto;
+  padding: 20px;
+  gap: 20px;
+  overflow: auto;
+  background-color: rgba(66, 30, 30, 0.317);
+}
+
+form{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(66, 30, 30, 0.178);
+  padding: 15px;
+}
+
+.btDiagnosticar{
+  margin-top: 20px;
+  border-style: none;
+  height: 45px;
+  width: 200px;
+  padding: 6px 12px;
+  background-color: rgb(240, 235, 235);
+  color: rgb(0, 0, 0); 
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.6s ease;
+}
+
+.paciente-diag{
+  
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: flex-start;
+  align-items:flex-start;
+  background-color: rgba(66, 30, 30, 0.458);
+  padding: 10px;
+  
+}
+
+

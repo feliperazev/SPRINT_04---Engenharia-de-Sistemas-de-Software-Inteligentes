@@ -1,0 +1,33 @@
+.tablePaciente{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+
+table, th, td{
+    border: 1px solid rgb(33, 33, 33);
+    border-collapse: collapse;
+}
+
+.tablePaciente th{
+    background-color: var(--primary-color);
+    font-size:  1rem;
+    text-align: center;
+    padding: 0 10px 0 10px;
+}
+
+.tablePaciente td{
+    padding: 0 10px 0 10px;
+    font-size: 1em;
+    background-color: #cccccca3;
+}
+
+.tablePaciente th:last-child,
+.tablePaciente td:last-child{
+    min-width: 160px;
+    text-align: center;
+    padding: 5px;
+}
+.tablePaciente tr:hover{
+    background-color: var(--secundary-color);
+}

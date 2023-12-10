@@ -1,0 +1,19 @@
+.paciente-data{
+    display: flex;
+    margin: 10px;
+    justify-content: flex-start;
+    align-items:center;
+    background-color: rgba(66, 30, 30, 0.458);
+    padding: 15px;
+  }
+  
+  .input-age{
+    width: 50px;
+  }
+  .paciente-age{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .input-sex{
+    width: 120px;
+  }

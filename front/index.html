@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="paciente_data.css">
+    <link rel="stylesheet" href="table.css">
+    
+    <title>Heart attack system</title>
+    <link rel="icon" href="img/heart.jpg" type="image/png">
+</head>
+
+<body>
+     
+    <div class="header-container">
+        <div class="header-image">
+            <img src="img/heart.png" alt="Descrição da Imagem">
+        </div>
+        <div class="header-text">
+            <h1>Predição de doença cardíaca</h1>
+            <h4>Preencha os dados e inicie o diagnóstico.</h4>
+        </div>
+    </div>
+    
+
+    <div class="main-container">
+        
+        
+        <div class="paciente-data">
+            <div>
+                <label for="name">Nome:</label><br>
+                <input type="text" id="inputName" name="name">
+            </div>
+            <div class="paciente-age">
+                <label for="age">1. Idade:</label><br>
+                <input type="number" id="inputAge" name="age">
+            </div>
+            <div class="paciente-sex">
+                <label for="sex">2. Sexo:</label><br>
+                <select id="inputSex" class="input-sex" name="sex">
+                    <option value=""></option>
+                    <option value="1">Masculino</option>
+                    <option value="0">Feminino</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <div >
+            <form>
+                <legend>Dados clínicos</legend><br>    
+                
+                <label for="cp">3. Chest Pain type:</label>
+                <select id="inputCp" name="cp">
+                    <option value=""></option>
+                    <option value="1">Typical angina (all criteria present)</option>
+                    <option value="2">Atypical angina (two of three criteria satisfied)</option>
+                    <option value="3">Non-anginal pain (less than one criteria satisfied)</option>
+                    <option value="4">Asymptomatic (none of the criteria are satisfied)</option>
+                </select><br>
+                
+                
+                <label for="trestBPS">4. Resting Blood pressure (in mmHg, upon admission to the hospital):</label>
+                <input type="number" id="inputTrestBPS" placeholder="0.0"><br>
+
+
+                <label for="chol">5. Serum cholesterol in mg/dL:</label>
+                <input type="number" id="inputChol" placeholder="0.0"><br>
+                
+
+                <label for="fbs">6. Fasting blood sugar > 120 mg/dL (likely to be diabetic):</label>
+                <select id="inputFbs" name="fbs">
+                    <option value="-">Selecionar..</option>
+                    <option value="0">Falso</option>
+                    <option value="1">Verdadeiro</option>
+                </select><br>
+
+
+                <label for="restECG">7. Resting electrocardiogram results:</label>
+                <select id="inputRestECG" name="restECG">
+                    <option value="-">Selecionar..</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+                    <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+                </select><br>
+                        
+                <label for="thalach">8. Greatest number of beats per minute your heart can possibly reach during all-out strenuous exercise:</label>
+                <input type="number" id="inputThalch" placeholder="0.0" name="thalach"><br>
+                
+                
+                <label for="exang">9. Exercise induced angina:</label>
+                <select id="inputExang" name="exang">
+                    <option value="-">Selecionar..</option>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select><br>
+
+                <label for="oldpeak">10. ST depression induced by exercise relative to rest (in mm, achieved by subtracting the lowest ST segment points during exercise and rest):</label>
+                <input type="number" id="inputOldpeak" placeholder="0.0"><br>
+
+                            
+                <label for="slope">11. The slope of the peak exercise ST segment, ST-T abnormalities are considered to be a crucial indicator for identifying presence of ischaemia:</label>
+                <select id="inputSlope" name="slope">
+                    <option value="-">Selecionar</option>
+                    <option value="1">Upsloping</option>
+                    <option value="2">Flat</option>
+                    <option value="3">Downsloping</option>
+                </select><br>
+
+
+                <label for="ca">12. Number of major vessels (0-3) colored by fluoroscopy:</label>
+                <select id="inputCa" name="ca">
+                    <option value="-">Selecionar</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br>
+                
+                <label for="thal">13. Absorb thallium:</label>
+                <select id="inputThal" name="thal">
+                    <option value="-">Selecionar</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Fixed defect</option>
+                    <option value="2">Reversible defect</option>
+                </select>
+
+                <button class="btDiagnosticar" id="btDiagnosticar">Diagnosticar</button>
+            </form>
+        </div>
+        <div class="paciente-diag">                
+            
+            <div class="tabela">                
+                <h2>Pacientes diagnosticados</h2>
+    
+                <table id ="tablePaciente" class="tablePaciente">
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Idade</th>
+                            <th>Sexo</th>
+                            <th>ca</th>
+                            <th>cp</th>
+                            <th>exang</th>
+                            <th>fbs</th>
+                            <th>oldpeak</th>
+                            <th>restECG</th>
+                            <th>slope</th>
+                            <th>thal</th>
+                            <th>thalach</th>
+                            <th>trest</th>
+                            <th>chol</th>
+                            <th>Diagnóstico</th>
+                            <th>           </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Conteúdo dinâmico      -->
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
